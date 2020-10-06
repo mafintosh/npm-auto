@@ -1,0 +1,23 @@
+{
+  "name": "npm-auto",
+  "version": "0.0.0",
+  "description": "Auto installs npm dependencies from the script you want to run and runs the script",
+  "main": "index.js",
+  "bin": {
+    "npm-auto": "./index.js"
+  },
+  "dependencies": {
+    "detective": "^5.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/npm-auto.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/npm-auto/issues"
+  },
+  "homepage": "https://github.com/mafintosh/npm-auto"
+}
