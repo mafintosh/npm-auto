@@ -7,7 +7,8 @@
     "npm-auto": "./index.js"
   },
   "dependencies": {
-    "detective": "^5.2.0"
+    "detective": "^5.2.0",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {},
   "repository": {

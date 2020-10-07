@@ -26,7 +26,17 @@ It will `npm install` any deps used by the script if they are not resolvable alr
 
 ``` sh
 npm-auto my-script.js
+
+## use yarn
+npm-auto my-script.js -r https://registry.npm.taobao.org -t yarn 
 ```
+
+### config
+
+| param | action                  |
+| ----- | ----------------------- |
+| `-r`  | set registry(npm/cnpm)  |
+| `-t`  | set tool(npm/yarn/cnpm) |
 
 No more manual npm installs for gists!
 
