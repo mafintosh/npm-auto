@@ -19,11 +19,13 @@ const deps = detective(fs.readFileSync(filename))
 
 if (deps.length) {
   fs.mkdirSync('node_modules', { recursive: true })
-  spawnSync('npm', ['install'].concat(deps), { stdio: 'inherit' })
+  spawnSync('npm', ['install', '--silent', '--no-save'].concat(deps), {
+    stdio: 'inherit',
+  })
 }
 spawnSync(process.execPath, process.argv.slice(2), { stdio: 'inherit' })
 
-function unresolved (d) {
+function unresolved(d) {
   try {
     resolve(d)
     return false
