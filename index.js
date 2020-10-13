@@ -25,7 +25,7 @@ if (deps.length) {
 }
 spawnSync(process.execPath, process.argv.slice(2), { stdio: 'inherit' })
 
-function unresolved(d) {
+function unresolved (d) {
   try {
     resolve(d)
     return false
