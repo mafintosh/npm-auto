@@ -16,6 +16,8 @@ if (!filename) {
 const deps = detective(fs.readFileSync(filename))
   .filter(d => m.builtinModules.indexOf(d) === -1)
   .filter(unresolved)
+  .map(onlyModule)
+  .filter(dups)
 
 if (deps.length) {
   fs.mkdirSync('node_modules', { recursive: true })
@@ -30,4 +32,13 @@ function unresolved (d) {
   } catch (_) {
     return true
   }
+}
+
+function onlyModule (n) {
+  if (n[0] === '@') return n.split('/').slice(0, 2).join('/')
+  return n.split('/')[0]
+}
+
+function dups (n, i, all) {
+  return all.indexOf(n) === i
 }
