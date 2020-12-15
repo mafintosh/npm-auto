@@ -1,6 +1,6 @@
 {
   "name": "npm-auto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auto installs npm dependencies from the script you want to run and runs the script",
   "main": "index.js",
   "bin": {
