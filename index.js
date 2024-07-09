@@ -21,7 +21,7 @@ const deps = detective(fs.readFileSync(filename))
 
 if (deps.length) {
   fs.mkdirSync('node_modules', { recursive: true })
-  spawnSync('npm', ['install'].concat(deps), { stdio: 'inherit' })
+  spawnSync('npm', ['install', '--no-save'].concat(deps), { stdio: 'inherit' })
 }
 spawnSync(process.execPath, process.argv.slice(2), { stdio: 'inherit' })
 
